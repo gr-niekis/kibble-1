@@ -72,7 +72,7 @@ import json
 
 def run(API, environ, indata, session):
     
-    types = yaml.load(open("yaml/sourcetypes.yaml"))
+    types = yaml.safe_load(open("yaml/sourcetypes.yaml"))
     
     yield json.dumps(types)
 

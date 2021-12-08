@@ -33,7 +33,7 @@ import bcrypt
 import json
 
 mappings = json.load(open("mappings.json"))
-myyaml = yaml.load(open("kibble.yaml.sample"))
+myyaml = yaml.safe_load(open("kibble.yaml.sample"))
 
 dopip = False
 try:

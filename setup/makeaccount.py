@@ -48,7 +48,7 @@ arg_parser.add_argument("-o", "--org", help="Invite to this organisation")
 args = arg_parser.parse_args()
 
 # Load Kibble master configuration
-config = yaml.load(open("../api/yaml/kibble.yaml"))
+config = yaml.safe_load(open("../api/yaml/kibble.yaml"))
 
 DB = KibbleDatabase(config)
 

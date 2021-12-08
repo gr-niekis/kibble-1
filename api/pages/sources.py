@@ -222,7 +222,7 @@ def run(API, environ, indata, session):
         if canModifySource(session):
             new = 0
             old = 0
-            stypes = yaml.load(open("yaml/sourcetypes.yaml"))
+            stypes = yaml.safe_load(open("yaml/sourcetypes.yaml"))
             for source in indata.get('sources', []):
                 sourceURL = source['sourceURL']
                 sourceType = source['type']
